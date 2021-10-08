@@ -1,0 +1,25 @@
+{
+    "name": "stoffelio/statamic-widget-newest-users",
+    "license": "MIT",
+    "type": "statamic-addon",
+    "description": "List your latest user registrations on the cp dashboard",
+    "autoload": {
+      "psr-4": {
+        "Stoffelio\\NewestUsers\\": "src"
+      }
+    },
+    "extra": {
+      "statamic": {
+        "name": "Statamic Widget: Newest Users",
+        "description": "List your latest user registrations on the cp dashboard"
+      },
+      "laravel": {
+        "providers": [
+          "Stoffelio\\NewestUsers\\ServiceProvider"
+        ]
+      }
+    },
+    "require": {
+      "statamic/cms": "^3.0"
+    }
+  }
