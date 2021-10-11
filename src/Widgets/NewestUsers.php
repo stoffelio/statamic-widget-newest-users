@@ -17,12 +17,10 @@ class NewestUsers extends Widget
     {
         $limit = $this->config('limit', 5);
 
-        $results = collect(File::disk('users')->files())
-                    ->sortByDesc(function ($file) {
-                        return $file->getCTime();
-                    });
-
-        return json_encode($results);
+        $results = Statamic\Facades\User::query()
+            ->whereNotNull('created_at')
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         return view('stoffelio::widgets.newest_users', [
             'results' => $results

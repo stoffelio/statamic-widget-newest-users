@@ -8,7 +8,7 @@ Keep an eye on the users  that register with your site.
 
 ## Installation
 
-From your site folder, run `composer require webographen/statamic-widget-continue-editing` - or install it via the control panel.
+From your site folder, run `composer require stoffelio/statamic-widget-newest-users` - or install it via the control panel.
 
 ## Usage
 
@@ -16,29 +16,28 @@ To add the widget to  your control panel dashboard, edit the config under `confi
 
 ```php
 [
-    'type' => 'continue_editing',
+    'type' => 'newest_users',
     'width' => 100,
 ],
 
 ```
 
+After installing the widget, there will be no data shown for a while. Statamic does not save the creation timestamp, so only users registered after the installation of this addon will receive a timestamp and appear in the widget.
+
 ## Optional Parameters
 
-By default the widget display the last five entries across all collections. You can modify this by adding two more parameters:
+By default the widget displays:
 
 ```php
 [
-    'type' => 'continue_editing',
+    'type' => 'newest_users',
     'width' => 100,
-    'collections' => '*',
     'limit' => 5
 ],
 
 ```
 
-**Collections:** One or more piped collections to display - e.g. 'pages', 'pages|posts', or '*' (any) for the default behavior
-
-**Limit:** The maximum number of entries as an integer
+**Limit:** The maximum number of users to display
 
 ## About Us
 
