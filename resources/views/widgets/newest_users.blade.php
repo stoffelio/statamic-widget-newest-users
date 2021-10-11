@@ -2,9 +2,9 @@
     <header class="flex items-center justify-between p-2 border-b">
         <h2 class="flex items-center">
             <div class="w-6 h-6 mr-1 text-grey-80">
-                @cp_svg('content-writing')
+                @cp_svg('users-box')
             </div>
-            <span>{{ __('Continue Editing') }}</span>
+            <span>{{ __('Newest Users') }}</span>
         </h2>
     </header>
     <div class="px-2 py-1">
