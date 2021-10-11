@@ -8,7 +8,7 @@ class UserCreatedListener
 {
     public function handle(UserSaved $event)
     {
-        if  (!$event->user->get('created_at')) {
+        if  (!$event->user->has('created_at')) {
             $event->user->set('created_at', time())
                         ->save();
         }

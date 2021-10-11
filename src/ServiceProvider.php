@@ -25,9 +25,9 @@ class ServiceProvider extends AddonServiceProvider
         parent::boot();
 
         \Statamic::afterInstalled(function ($command) {
-            $users = User::query()>get();
+            $users = User::query()->get();
             foreach ($users as $user) {
-                if (!$user->get('created_at')) {
+                if (!$user->has('created_at')) {
                     $user->set('created_at', 0)
                         ->save();
                 }
