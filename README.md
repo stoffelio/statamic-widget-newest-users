@@ -25,7 +25,7 @@ After installing the widget, there will be no data shown for a while. Statamic d
 
 ## Optional Parameters
 
-There is one optional parameter  **limit**, which states the maximum numbber of users to list (default: 5).
+There is one optional parameter  **limit**, which states the maximum number of users to list (default: 5).
 
 ```php
 [
