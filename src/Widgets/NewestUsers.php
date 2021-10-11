@@ -19,6 +19,7 @@ class NewestUsers extends Widget
         $results = User::query()
             ->where('created_at', '>', 0)
             ->orderBy('created_at', 'desc')
+            ->limit($limit)
             ->get();
 
         return view('stoffelio::widgets.newest_users', [
