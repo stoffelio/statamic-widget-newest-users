@@ -1,6 +1,6 @@
 # Statamic Widget: Newest Users
 
-Keep an eye on the users  that register with your site.
+Keep an eye on the users that register with your site.
 
 ## Requirements
 
@@ -12,7 +12,7 @@ From your site folder, run `composer require stoffelio/statamic-widget-newest-us
 
 ## Usage
 
-To add the widget to  your control panel dashboard, edit the config under `config/statamic/cp.php` and add the following entry to the `widgets` array:
+To add the widget to your control panel dashboard, edit the config under `config/statamic/cp.php` and add the following entry to the `widgets` array:
 
 ```php
 [
@@ -26,7 +26,7 @@ After installing the widget, there will be no data shown for a while. Statamic d
 
 ## Optional Parameters
 
-By default the widget displays:
+There is one optional parameter  **limit**, which states the maximum numbber of users to list (default: 5).
 
 ```php
 [
@@ -36,9 +36,3 @@ By default the widget displays:
 ],
 
 ```
-
-**Limit:** The maximum number of users to display
-
-## About Us
-
-[Webographen](https://webographen.de/) is a digital design studio focusing on Statamic. We make websites that are not just pretty, but scale in terms of design and technology.
