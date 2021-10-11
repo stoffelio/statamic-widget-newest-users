@@ -19,7 +19,6 @@ To add the widget to your control panel dashboard, edit the config under `config
     'type' => 'newest_users',
     'width' => 100,
 ],
-
 ```
 
 After installing the widget, there will be no data shown for a while. Statamic does not save the creation timestamp, so only users registered after the installation of this addon will receive a timestamp and appear in the widget.
@@ -34,5 +33,4 @@ There is one optional parameter  **limit**, which states the maximum numbber of 
     'width' => 100,
     'limit' => 5
 ],
-
 ```
