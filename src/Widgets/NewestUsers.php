@@ -4,7 +4,6 @@ namespace Stoffelio\NewestUsers\Widgets;
 
 use Statamic\Widgets\Widget;
 use Statamic\Facades\User;
-use Statamic\Facades\Collection as CollectionAPI;
 
 class NewestUsers extends Widget
 {
@@ -17,8 +16,8 @@ class NewestUsers extends Widget
     {
         $limit = $this->config('limit', 5);
 
-        $results = Statamic\Facades\User::query()
-            ->whereNotNull('created_at')
+        $results = User::query()
+            ->where('created_at', '>', 0)
             ->orderBy('created_at', 'desc')
             ->get();
 

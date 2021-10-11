@@ -12,14 +12,11 @@
             <div class="flex justify-between py-1 text-sm">
                 <div class="flex justify-between flex-grow">
                     <a href="{{ $result->editUrl() }}" class="font-bold">
-                        {{ $result->title }}
+                        {{ $result->name }}
                     </a>
-                    <span class="mt-px ml-2 text-white badge-sm bg-grey-70">
-                        {{ $result->collection()->id() }}
-                    </span> 
                 </div>
                 <div class="pl-2 text-grey-70">
-                    {{ $result->augmentedValue('updated_at')->format(config('statamic.cp.date_format')) }}
+                    {{ $result->augmentedValue('created_at')->format(config('statamic.cp.date_format')) }}
                 </div>
             </div>
         @endforeach
