@@ -12,7 +12,7 @@
                     {{ $result->name ?? $result->email() }}
                 </a>
                 <span class="text-xs whitespace-nowrap text-gray-500 dark:text-gray-400">
-                    {{ \Carbon\Carbon::createFromTimestamp($result->get('created_at'))->setTimezone(\Statamic\Statamic::displayTimezone())->format(\Statamic\Statamic::dateFormat()) }}
+                    {{ \Stoffelio\NewestUsers\Widgets\NewestUsers::registeredAt($result) }}
                 </span>
             </div>
         @endforeach

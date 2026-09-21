@@ -23,7 +23,9 @@ To add the widget to your control panel dashboard, edit the config under `config
 ],
 ```
 
-After installing the widget, there will be no data shown for a while. Statamic does not save the creation timestamp, so only users registered after the installation of this addon will receive a timestamp and appear in the widget.
+If your users are stored in files, the widget will show nothing for a while. Statamic does not record a creation timestamp for file users, so this addon writes one when a user is saved, and only users registered after you install it can appear.
+
+If your users are stored in the database, every user has a real `created_at` column already and the widget lists them straight away.
 
 ## Optional Parameters
 
