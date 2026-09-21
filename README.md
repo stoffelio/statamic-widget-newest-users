@@ -4,7 +4,9 @@ Keep an eye on the users that register with your site.
 
 ## Requirements
 
-- Statamic v3
+- Statamic v6
+
+For Statamic v3, v4 and v5, use v1.2.0.
 
 ## Installation
 
@@ -25,7 +27,7 @@ After installing the widget, there will be no data shown for a while. Statamic d
 
 ## Optional Parameters
 
-There is one optional parameter  **limit**, which states the maximum number of users to list (default: 5).
+There is one optional parameter **limit**, which states the maximum number of users to list (default: 5).
 
 ```php
 [
@@ -34,3 +36,7 @@ There is one optional parameter  **limit**, which states the maximum number of u
     'limit' => 5
 ],
 ```
+
+## About
+
+Built and maintained by [Alexander Stoffel](https://stoffel.io/), freelance Statamic and Laravel developer.

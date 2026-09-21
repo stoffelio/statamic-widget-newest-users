@@ -1,23 +1,19 @@
-<div class="h-full p-0 card">
-    <header class="flex items-center justify-between p-2 border-b">
-        <h2 class="flex items-center">
-            <div class="w-6 h-6 mr-1 text-grey-80">
-                @cp_svg('users-box')
-            </div>
+<div class="bg-white dark:bg-gray-850 rounded-xl ring ring-gray-200 dark:ring-gray-700/80 shadow-ui-md @container/widget" data-ui-card="" data-inset="true">
+    <header class="flex items-center min-h-[49px] justify-between border-b border-gray-200 px-4.5 py-2 dark:border-gray-700">
+        <div class="flex items-center gap-2.5">
+            @cp_svg('icons/users', 'size-5 shrink-0 text-gray-500')
             <span>{{ __('Newest Users') }}</span>
-        </h2>
+        </div>
     </header>
-    <div class="px-2 py-1">
-      @foreach ($results as $result)
-            <div class="flex justify-between py-1 text-sm">
-                <div class="flex justify-between flex-grow">
-                    <a href="{{ $result->editUrl() }}" class="font-bold">
-                        {{ $result->name }}
-                    </a>
-                </div>
-                <div class="pl-2 text-grey-70">
-                    {{ Carbon\Carbon::createFromTimestamp($result->augmentedValue('created_at'))->format(config('statamic.cp.date_format')) }}
-                </div>
+    <div class="px-4 py-2">
+        @foreach ($results as $result)
+            <div class="flex justify-between gap-2 py-1">
+                <a href="{{ $result->editUrl() }}" class="text-sm font-medium no-underline hover:underline">
+                    {{ $result->name ?? $result->email() }}
+                </a>
+                <span class="text-xs whitespace-nowrap text-gray-500 dark:text-gray-400">
+                    {{ \Carbon\Carbon::createFromTimestamp($result->get('created_at'))->setTimezone(\Statamic\Statamic::displayTimezone())->format(\Statamic\Statamic::dateFormat()) }}
+                </span>
             </div>
         @endforeach
     </div>
